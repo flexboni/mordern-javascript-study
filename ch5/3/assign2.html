@@ -1,0 +1,23 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function checkSpam(str) {
+        if (!str || typeof str !== "string") return false;
+
+        const lowerCaseStr = str.toLowerCase();
+
+        return lowerCaseStr.includes("viagra") || lowerCaseStr.includes("xxx");
+      }
+
+      alert(checkSpam("buy ViAgRA now")); // true
+      alert(checkSpam("free xxxxx")); // true
+      alert(checkSpam("innocent rabbit")); // false
+    </script>
+  </body>
+</html>
